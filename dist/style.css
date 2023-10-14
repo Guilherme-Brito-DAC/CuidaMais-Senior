@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Blinker&display=swap');
+
+:root {
+    --primary-color: #0068ff;
+    --neutral-light: #ffffff;
+    --neutral-medium: #ebebeb;
+    --neutral-medium-dark: #727272;
+    --neutral-dark: #1f1f1f;
+
+    --boder-radius: 25px;
+    --boder-radius-2: 80px;
+
+    --spacing: 10rem;
+}
+
+body {
+    font-family: 'Blinker', sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 5% 0 5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--neutral-dark);
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+label {
+    color: var(--neutral-medium-dark);
+    line-height: 25px;
+    font-size: 18.5px;
+}
+
+.container-mid {
+    border-radius: var(--boder-radius);
+    padding: 4rem 6rem;
+    background: var(--neutral-medium);
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-column-gap: 10%;
+    align-items: center;
+}
+
+.container-mid img {
+    width: 100%;
+    border-radius: var(--boder-radius);
+    object-fit: cover;
+}
+
+.btn {
+    border-radius: 25px;
+    border: 0;
+    outline: none;
+    padding: 1rem 2rem;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-primary {
+    background: var(--primary-color);
+    color: var(--neutral-light);
+}
+
+.outlined-button-primary {
+    color: var(--neutral-medium-dark);
+    background: none;
+    border: 2px solid var(--neutral-medium-dark);
+}
+
+.button-primary:hover {
+    transform: scale(1.01);
+}
+
+header {
+    height: 80vh;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 2rem 4rem;
+    background: var(--neutral-medium);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.empresas-parceiras,
+.titulos,
+.termos-de-servico {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    border-radius: var(--boder-radius-2);
+}
+
+.empresas-parceiras,
+.titulos {
+    background-color: var(--primary-color);
+    margin: 2rem 0;
+}
+
+.termos-de-servico {
+    background-color: var(--neutral-light);
+    width: 100%;
+}
+
+.nossos-servicos {
+    margin: var(--spacing) 0;
+    text-align: center;
+}
+
+.servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.servico {
+    border-radius: var(--boder-radius);
+    height: 10rem;
+    background: var(--neutral-medium);
+    padding: 2rem 2rem;
+    width: 45%;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    text-align: left;
+}
+
+.servico img {
+    height: 100px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: var(--spacing);
+    background-color: var(--primary-color);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 2% 2%;
+}
+
+.primary-label {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.nossos-servicos-descricao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nossos-servicos-descricao label {
+    width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+    :root {
+        --spacing: 4rem;
+    }
+
+    main {
+        padding: 4% 4% 0 4%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 30px;
+    }
+
+    .servicos{
+        border-bottom: 1px solid var(--neutral-medium);
+        padding-bottom: 2rem;
+    }
+
+    .servico {
+        width: 100%;
+        flex-wrap: wrap;
+        height: fit-content;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-mid {
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .nossos-servicos-descricao label {
+        width: 100%;
+    }
+}
