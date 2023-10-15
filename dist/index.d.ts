@@ -1,1 +1,2 @@
-declare const teste = "";
+declare const obsever: IntersectionObserver;
+declare const elementosParaExibir: NodeListOf<Element>;
