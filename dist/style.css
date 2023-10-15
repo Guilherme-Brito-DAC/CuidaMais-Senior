@@ -95,6 +95,17 @@ label {
     grid-template-columns: 45% 45%;
     grid-column-gap: 10%;
     align-items: center;
+    opacity: 1 !important;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banner div {
+    width: 40%;
 }
 
 .container-mid img {
@@ -182,6 +193,10 @@ header {
 .titulos {
     background-color: var(--primary-color);
     margin: 2rem 0;
+    background: radial-gradient(circle, #0049b7 10%, transparent 11%), radial-gradient(circle at bottom left, #0049b7 5%, transparent 6%), radial-gradient(circle at bottom right, #0049b7 5%, transparent 6%), radial-gradient(circle at top left, #0049b7 5%, transparent 6%), radial-gradient(circle at top right, #0049b7 5%, transparent 6%);
+    background-size: 3em 3em;
+    background-color: #0068ff;
+    opacity: 1
 }
 
 .termos-de-servico {
@@ -226,6 +241,10 @@ footer {
     border-top-left-radius: 25px;
     padding: 4% 2%;
     text-align: center;
+    background: radial-gradient(circle, #0049b7 10%, transparent 11%), radial-gradient(circle at bottom left, #0049b7 5%, transparent 6%), radial-gradient(circle at bottom right, #0049b7 5%, transparent 6%), radial-gradient(circle at top left, #0049b7 5%, transparent 6%), radial-gradient(circle at top right, #0049b7 5%, transparent 6%);
+    background-size: 3em 3em;
+    background-color: #0068ff;
+    opacity: 1
 }
 
 .primary-label {
@@ -322,8 +341,11 @@ h2 span {
 .comentarios {
     display: flex;
     overflow: auto;
+    justify-content: center;
+    flex-wrap: wrap;
     width: max-content;
     gap: 30px;
+    width: 100%;
 }
 
 .comentario {
@@ -348,22 +370,84 @@ h2 span {
     object-fit: cover;
 }
 
+.agende-uma-visita {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: 0.8rem 3rem;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    margin-top: 0.5rem;
+    resize: none;
+}
+
+textarea {
+    width: 83%;
+}
+
 @media only screen and (max-width: 800px) {
     :root {
         --spacing: 4rem;
+    }
+
+    textarea {
+        width: 58%;
     }
 
     main {
         padding: 4% 4% 0 4%;
     }
 
+    .banner {
+        margin-top: 1rem;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #nosContate {
+        display: none;
+    }
+
+    .logo {
+        text-align: center;
+        width: 100%;
+        text-wrap: nowrap;
+    }
+
+    .banner div {
+        width: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 4rem;
+        height: fit-content;
+    }
+
     h1,
     h2,
-    h3,
     h4,
     h5,
     h6 {
         font-size: 30px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .termos-de-servico {
+        font-size: 11px;
+        flex-direction: column;
     }
 
     h1 span,
@@ -405,5 +489,14 @@ h2 span {
 
     .nossos-servicos-descricao label {
         width: 100%;
+    }
+
+    .empresas-parceiras,
+    .titulos {
+        flex-wrap: wrap;
+        height: fit-content;
+        text-align: center;
+        padding: 2rem;
+        gap: 10px;
     }
 }
