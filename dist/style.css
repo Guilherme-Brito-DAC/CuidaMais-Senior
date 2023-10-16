@@ -90,7 +90,12 @@ label {
 .container-mid {
     border-radius: var(--boder-radius);
     padding: 4rem 6rem;
-    background: var(--neutral-medium);
+    background-image: url('./imgs/background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--neutral-medium);
+    background-blend-mode: darken;
     display: grid;
     grid-template-columns: 45% 45%;
     grid-column-gap: 10%;
@@ -144,7 +149,12 @@ header {
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     padding: 2rem 4rem;
-    background: var(--neutral-medium);
+    background-image: url('./imgs/background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--neutral-medium);
+    background-blend-mode: darken;
 }
 
 .d-flex {
@@ -380,7 +390,7 @@ input,
 textarea {
     padding: 0.8rem 3rem;
     border: 0;
-    border-radius: 15px;
+    border-radius: 8px;
     outline: none;
     margin-top: 0.5rem;
     resize: none;
