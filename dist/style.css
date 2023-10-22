@@ -445,10 +445,13 @@ textarea {
 
     h1,
     h2,
-    h4,
     h5,
     h6 {
         font-size: 30px;
+    }
+
+    h4 {
+        font-size: 15px;
     }
 
     h3 {
@@ -495,6 +498,10 @@ textarea {
         flex-direction: column;
         gap: 30px;
         text-align: center;
+    }
+
+    .comentario{
+        width: 15rem;
     }
 
     .nossos-servicos-descricao label {
